@@ -1,10 +1,29 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/home_page.dart';
+import 'package:flutter_application_2/pages/settings_page.dart';
 
 
-class FirstPage extends StatelessWidget {
+class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
+
+  @override
+  State<FirstPage> createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
+  int _selectedIndex = 0;
+
+void _navigateBottomBar(int index) {
+  setState(() {
+    _selectedIndex = index;
+  });
+}
+  final List _pages = [
+    HomePage(),
+    SettingsPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -16,37 +35,27 @@ class FirstPage extends StatelessWidget {
       ),
       backgroundColor: Colors.deepPurple[200],
       ),
-      drawer: Drawer(
-        child: Column(
-          children: [
-            DrawerHeader(child: Icon(Icons.favorite, size: 100.0,),),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('H O M E'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/homepage');
-                  
-            },     
-             ),
-                  ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('S E T T I N G S'),
-              onTap: () {
-                Navigator.pushNamed(context, '/settingspage');
-                }
-                  ),
-                ],
-          ),
-      ),
-    body: Center(
-      child: ElevatedButton(
-        child: Text("S E C O N D   P A G E"),
-        onPressed: () {
-          Navigator.pushNamed(context, '/secondpage');
-        },
-      ),
+      
+    body: _pages[_selectedIndex],
+    bottomNavigationBar: BottomNavigationBar(
+      currentIndex: _selectedIndex,
+      onTap: _navigateBottomBar, 
+      items: [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Home',
+          backgroundColor: Colors.deepPurple[200],
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.settings),
+          label: 'Settings',
+          backgroundColor: Colors.deepPurple[200],
+        ),
+      
+      ],
     ),
+      
+    
     );
   }
 }
