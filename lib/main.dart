@@ -17,32 +17,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.deepPurple[100],
-        body: ListView(
-          //mainAxisAlignment: MainAxisAlignment.center,
-          // mainAxisAlignment: MainAxisAlignment.start,
-          // mainAxisAlignment: MainAxisAlignment.end,
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
-          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //crossAxisAlignment: CrossAxisAlignment.center,
-          // crossAxisAlignment: CrossAxisAlignment.start,
-          // crossAxisAlignment: CrossAxisAlignment.end,
-          // crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-              height: 350,
-              color: Colors.deepPurple,
-            ),
-            Container(
-              height: 350,
-              color: Colors.deepPurple[400],
-            ),
-            Container(
-              height: 350,
-              color: Colors.deepPurple[200],
-            ),
-          ],
-        ),
+        body: ListView.builder(
+          itemCount: 20,
+          itemBuilder: (context, index) => ListTile(
+            title: Text(index.toString()),
+          ))
           ),
         );
      
