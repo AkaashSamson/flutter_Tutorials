@@ -29,20 +29,22 @@ class MyApp extends StatelessWidget {
           // crossAxisAlignment: CrossAxisAlignment.end,
           // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              width: 200,
-              height: 200,
+            Expanded(
+              flex: 3,
+              child: Container(
               color: Colors.deepPurple,
+              ),
             ),
-            Container(
-              width: 200,
-              height: 200,
+            Expanded(
+              flex: 2,
+              child: Container(
               color: Colors.deepPurple[400],
+              ),
             ),
-            Container(
-              width: 200,
-              height: 200,
+            Expanded(
+              child: Container(
               color: Colors.deepPurple[200],
+              ),
             ),
           ],
         ),
