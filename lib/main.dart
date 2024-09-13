@@ -18,33 +18,28 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.deepPurple[100],
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.center,
           // mainAxisAlignment: MainAxisAlignment.start,
           // mainAxisAlignment: MainAxisAlignment.end,
           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           // mainAxisAlignment: MainAxisAlignment.spaceAround,
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          //crossAxisAlignment: CrossAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.start,
           // crossAxisAlignment: CrossAxisAlignment.end,
           // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(
-              flex: 3,
-              child: Container(
+            Container(
+              height: 350,
               color: Colors.deepPurple,
-              ),
             ),
-            Expanded(
-              flex: 2,
-              child: Container(
+            Container(
+              height: 350,
               color: Colors.deepPurple[400],
-              ),
             ),
-            Expanded(
-              child: Container(
+            Container(
+              height: 350,
               color: Colors.deepPurple[200],
-              ),
             ),
           ],
         ),
