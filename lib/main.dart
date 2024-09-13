@@ -17,34 +17,35 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.deepPurple[100],
-        appBar: AppBar(
-          title: Text("Sky Bar",
-          style: TextStyle(color: Colors.white),),
-          backgroundColor: Colors.deepPurple,
-          elevation: 0,
-          leading: Icon(Icons.menu,color: Colors.white),
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout, color: Colors.white,))],
-          ),
-        body: Center(
-          child: Container(  //Container
-            height: 300,
-            width: 300,
-            
-            decoration: BoxDecoration(
-             color: Colors.deepPurple,
-             //curve the border radius 
-             borderRadius: BorderRadius.circular(20),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.start,
+          // mainAxisAlignment: MainAxisAlignment.end,
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          // crossAxisAlignment: CrossAxisAlignment.end,
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.deepPurple,
             ),
-            padding: EdgeInsets.all(25),
-            child: Icon(
-              Icons.home,
-              color: Colors.white,
-              size: 100,
-
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.deepPurple[400],
             ),
-              ),
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.deepPurple[200],
             ),
-
+          ],
+        ),
           ),
         );
      
