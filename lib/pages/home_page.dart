@@ -11,9 +11,11 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.only(left: 30),
         child: Text('H O M E   P A G E'),
       ),
+      backgroundColor: Colors.deepPurple[100],
+
       ),
       body: Center(
-        child: Text('Welcome to the Home Page!'),
+        child: Text('W e l c o m e   t o   t h e   H o m e   P a g e !'),
       ),
     );
   }

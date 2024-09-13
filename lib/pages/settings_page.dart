@@ -8,12 +8,13 @@ class SettingsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Padding(
-        padding: const EdgeInsets.only(left: 30),
+        padding: const EdgeInsets.only(left: 5),
         child: Text('S E T T I N G S   P A G E'),
       ),
+      backgroundColor: Colors.deepPurple[100],
       ),
       body: Center(
-        child: Text('Settings Page Content'),
+        child: Text('S e t t i n g s     P a g e    C o n t e n t'),
       ),
     );
   }
