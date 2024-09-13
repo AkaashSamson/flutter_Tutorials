@@ -10,15 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
    MyApp({super.key});
    
-  List states = [
-    'Andhra Pradesh',   'Arunachal Pradesh', 'Assam',             'Bihar', 
-    'Chhattisgarh',     'Goa',               'Gujarat',           'Haryana', 
-    'Himachal Pradesh', 'Jharkhand',         'Karnataka',         'Kerala', 
-    'Madhya Pradesh',   'Maharashtra',       'Manipur',           'Meghalaya', 
-    'Mizoram',          'Nagaland',          'Odisha',            'Punjab', 
-    'Rajasthan',        'Sikkim',            'Tamil Nadu',        'Telangana', 
-    'Tripura',          'Uttar Pradesh',     'Uttarakhand',       'West Bengal'
-  ];
   
 
   @override
@@ -28,11 +19,37 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.deepPurple[100],
-        body: ListView.builder(
-          itemCount: states.length,
-          itemBuilder: (context, index) => ListTile(
-            title: Text(states[index]),
-          ))
+        body: Stack(
+          //alignment: Alignment.topLeft,
+          // alignment: Alignment.topCenter,
+          // alignment: Alignment.topRight,
+          // alignment: Alignment.centerLeft,
+          alignment: Alignment.center,
+
+          // alignment: Alignment.centerRight,
+          // alignment: Alignment.bottomLeft,
+          // alignment: Alignment.bottomCenter,
+          // alignment: Alignment.bottomRight,
+        children: [
+
+            Container(
+            width: 300,
+            height: 300,
+            color: Colors.deepPurple,
+            ),
+            Container(
+            width: 200,
+            height: 200,
+            color: Colors.deepPurple[700],
+            ),
+            Container(
+            width: 100,
+            height: 100,
+            color: Colors.deepPurple[900],
+            ),
+        ],
+
+        ),
           ),
         );
      
