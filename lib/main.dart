@@ -28,20 +28,17 @@ class MyApp extends StatelessWidget {
              borderRadius: BorderRadius.circular(20),
             ),
             padding: EdgeInsets.all(25),
-            child: Text(
-              "Akaash  Samson",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 28,
+            child: Icon(
+              Icons.home,
+              color: Colors.white,
+              size: 100,
 
-                fontWeight: FontWeight.bold,
-              )
+            ),
+              ),
             ),
 
           ),
-        ),
-      ), // Where it is gonna go to as soon as the app starts
-      //Scaffold is sort of a skeleton widget that holds the different components of your app
-    );
+        );
+     
   }
 }
