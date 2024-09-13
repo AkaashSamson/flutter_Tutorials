@@ -3,36 +3,20 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/first_page.dart';
 
 void main() {
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
    MyApp({super.key});
-   
-  void usertapped(){
-    print("User just tapped");
-  }
 
   @override
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.deepPurple[100],
-        body: GestureDetector(
-          onTap: usertapped,
-          child: Center(
-               child: Container(
-                width: 200,
-                height: 200,
-                color: Colors.deepPurple,
-                child: Center(child: Text("Tap me!"),),
-               ),
-            ),
-        ),
-          ),
+      home: FirstPage()
         );
      
   }
