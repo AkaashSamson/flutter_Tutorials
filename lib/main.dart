@@ -19,36 +19,18 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.deepPurple[100],
-        body: Stack(
-          //alignment: Alignment.topLeft,
-          // alignment: Alignment.topCenter,
-          // alignment: Alignment.topRight,
-          // alignment: Alignment.centerLeft,
-          alignment: Alignment.center,
-
-          // alignment: Alignment.centerRight,
-          // alignment: Alignment.bottomLeft,
-          // alignment: Alignment.bottomCenter,
-          // alignment: Alignment.bottomRight,
-        children: [
-
-            Container(
-            width: 300,
-            height: 300,
-            color: Colors.deepPurple,
+        body: GestureDetector(
+          onTap: () {
+            print("User Tapped");
+          },
+          child: Center(
+               child: Container(
+                width: 200,
+                height: 200,
+                color: Colors.deepPurple,
+                child: Center(child: Text("Tap me!"),),
+               ),
             ),
-            Container(
-            width: 200,
-            height: 200,
-            color: Colors.deepPurple[700],
-            ),
-            Container(
-            width: 100,
-            height: 100,
-            color: Colors.deepPurple[900],
-            ),
-        ],
-
         ),
           ),
         );
