@@ -10,7 +10,9 @@ void main() {
 class MyApp extends StatelessWidget {
    MyApp({super.key});
    
-  
+  void usertapped(){
+    print("User just tapped");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +22,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.deepPurple[100],
         body: GestureDetector(
-          onTap: () {
-            print("User Tapped");
-          },
+          onTap: usertapped,
           child: Center(
                child: Container(
                 width: 200,
